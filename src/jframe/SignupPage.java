@@ -16,6 +16,38 @@ public class SignupPage extends javax.swing.JFrame {
     public SignupPage() {
         initComponents();
     }
+    
+    //methode to insert values into users table
+    public void insertSignupDetails(){
+        String name = txt_username.getText();
+        String password = txt_password.getText();
+        String email = txt_email.getText();
+        String contact = txt_contact.getText();
+        
+        try {
+            Connection con =DBConection.getConnection();
+            String sql = "insert into users(name, password,email, contact) values (?, ? ,? ,?)";
+            preparedStatement pst = con.preparedStatement(sql);
+            
+            pst.setString(1, name);
+            pst.setString(2, password);
+            pst.setString(3, email);
+            pst.setString(4, contact);
+            
+            int updatedRowCount = pst.executeUpdate();
+            
+            if (updatedRowCount > 0){
+                JoptionPane.showMessageDialog(this, "Recorded inserted successfuly");
+               
+            }else{
+                JoptionPane.showMessageDialog(this, "Recorded inserted failed");
+            }
+            
+        }catsch (Exception e) {
+        e.printStackTrace();
+    }
+        
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -208,9 +240,14 @@ public class SignupPage extends javax.swing.JFrame {
 
         rSMaterialButtonCircle2.setBackground(new java.awt.Color(255, 51, 51));
         rSMaterialButtonCircle2.setText("Signup");
+        rSMaterialButtonCircle2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rSMaterialButtonCircle2ActionPerformed(evt);
+            }
+        });
         jPanel1.add(rSMaterialButtonCircle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 610, 270, 50));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 0, 540, 740));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 0, 540, 740));
 
         setSize(new java.awt.Dimension(1533, 858));
         setLocationRelativeTo(null);
@@ -235,6 +272,11 @@ public class SignupPage extends javax.swing.JFrame {
     private void txt_contactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_contactActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_contactActionPerformed
+
+    private void rSMaterialButtonCircle2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rSMaterialButtonCircle2ActionPerformed
+        // TODO add your handling code here:
+        insertSignupDetails();
+    }//GEN-LAST:event_rSMaterialButtonCircle2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -299,4 +341,10 @@ public class SignupPage extends javax.swing.JFrame {
     private app.bolivia.swing.JCTextField txt_password;
     private app.bolivia.swing.JCTextField txt_username;
     // End of variables declaration//GEN-END:variables
+
+    private static class JoptionPane {
+
+        public JoptionPane() {
+        }
+    }
 }
