@@ -36,6 +36,22 @@ public class SignupPage extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        txt_username = new app.bolivia.swing.JCTextField();
+        jLabel9 = new javax.swing.JLabel();
+        txt_password = new app.bolivia.swing.JCTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jCTextField3 = new app.bolivia.swing.JCTextField();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        txt_email = new app.bolivia.swing.JCTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        txt_contact = new app.bolivia.swing.JCTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        rSMaterialButtonCircle1 = new rojerusan.RSMaterialButtonCircle();
+        rSMaterialButtonCircle2 = new rojerusan.RSMaterialButtonCircle();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -73,8 +89,8 @@ public class SignupPage extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("URW Palladio L", 0, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Username");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 180, 30));
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Account_50px.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 60, 50));
 
         jLabel7.setFont(new java.awt.Font("Umpush", 1, 25)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -86,11 +102,139 @@ public class SignupPage extends javax.swing.JFrame {
         jLabel8.setText("Create new account");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 180, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 0, 540, 740));
+        txt_username.setBackground(new java.awt.Color(102, 102, 255));
+        txt_username.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_username.setFont(new java.awt.Font("Dialog", 0, 19)); // NOI18N
+        txt_username.setPlaceholder("Enter Username");
+        txt_username.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_usernameActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txt_username, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 220, -1));
+
+        jLabel9.setFont(new java.awt.Font("URW Palladio L", 0, 20)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("Username");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 180, 30));
+
+        txt_password.setBackground(new java.awt.Color(102, 102, 255));
+        txt_password.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_password.setFont(new java.awt.Font("Dialog", 0, 19)); // NOI18N
+        txt_password.setPlaceholder("Enter Password");
+        txt_password.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_passwordActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 220, -1));
+
+        jLabel10.setFont(new java.awt.Font("URW Palladio L", 0, 20)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Secure_50px.png"))); // NOI18N
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 60, 50));
+
+        jLabel11.setFont(new java.awt.Font("URW Palladio L", 0, 20)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Password");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, 180, 30));
+
+        jCTextField3.setBackground(new java.awt.Color(102, 102, 255));
+        jCTextField3.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        jCTextField3.setFont(new java.awt.Font("Dialog", 0, 19)); // NOI18N
+        jCTextField3.setPlaceholder("Enter Username");
+        jCTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCTextField3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jCTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 220, -1));
+
+        jLabel12.setFont(new java.awt.Font("URW Palladio L", 0, 20)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Account_50px.png"))); // NOI18N
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 60, 50));
+
+        jLabel13.setFont(new java.awt.Font("URW Palladio L", 0, 20)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("Username");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 180, 30));
+
+        txt_email.setBackground(new java.awt.Color(102, 102, 255));
+        txt_email.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_email.setFont(new java.awt.Font("Dialog", 0, 19)); // NOI18N
+        txt_email.setPlaceholder("Enter Email");
+        txt_email.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_emailActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txt_email, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 220, -1));
+
+        jLabel14.setFont(new java.awt.Font("URW Palladio L", 0, 20)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Secured_Letter_50px.png"))); // NOI18N
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 60, 50));
+
+        jLabel15.setFont(new java.awt.Font("URW Palladio L", 0, 20)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("Email");
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, 180, 30));
+
+        txt_contact.setBackground(new java.awt.Color(102, 102, 255));
+        txt_contact.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 2, 0, new java.awt.Color(255, 255, 255)));
+        txt_contact.setFont(new java.awt.Font("Dialog", 0, 19)); // NOI18N
+        txt_contact.setPlaceholder("Enter Contact number");
+        txt_contact.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_contactActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txt_contact, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 530, 220, -1));
+
+        jLabel16.setFont(new java.awt.Font("URW Palladio L", 0, 20)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8_Google_Mobile_50px.png"))); // NOI18N
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 60, 50));
+
+        jLabel17.setFont(new java.awt.Font("URW Palladio L", 0, 20)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Contact");
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 180, 30));
+
+        rSMaterialButtonCircle1.setBackground(new java.awt.Color(51, 51, 255));
+        rSMaterialButtonCircle1.setText("Login");
+        jPanel1.add(rSMaterialButtonCircle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 670, 270, 50));
+
+        rSMaterialButtonCircle2.setBackground(new java.awt.Color(255, 51, 51));
+        rSMaterialButtonCircle2.setText("Signup");
+        jPanel1.add(rSMaterialButtonCircle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 610, 270, 50));
+
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 0, 540, 740));
 
         setSize(new java.awt.Dimension(1533, 858));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void txt_usernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_usernameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_usernameActionPerformed
+
+    private void txt_passwordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_passwordActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_passwordActionPerformed
+
+    private void jCTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jCTextField3ActionPerformed
+
+    private void txt_emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_emailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_emailActionPerformed
+
+    private void txt_contactActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_contactActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_contactActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,7 +272,16 @@ public class SignupPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private app.bolivia.swing.JCTextField jCTextField3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -136,7 +289,14 @@ public class SignupPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel9;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle1;
+    private rojerusan.RSMaterialButtonCircle rSMaterialButtonCircle2;
+    private app.bolivia.swing.JCTextField txt_contact;
+    private app.bolivia.swing.JCTextField txt_email;
+    private app.bolivia.swing.JCTextField txt_password;
+    private app.bolivia.swing.JCTextField txt_username;
     // End of variables declaration//GEN-END:variables
 }

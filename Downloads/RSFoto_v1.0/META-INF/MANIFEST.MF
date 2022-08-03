@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.8.0_121-b13 (Oracle Corporation)
+X-COMMENT: Main-Class will be added automatically by build
+Main-Class: NewJFrame
+Class-Path: lib/timingframework-core-5.0.0.jar lib/timingframework-swi
+ ng-5.0.0.jar lib/AbsoluteLayout.jar
+
