@@ -20,17 +20,17 @@ public class SignupPage extends javax.swing.JFrame {
     //methode to insert values into users table
     public void insertSignupDetails(){
         String name = txt_username.getText();
-        String password = txt_password.getText();
+        String pwd = txt_password.getText();
         String email = txt_email.getText();
         String contact = txt_contact.getText();
         
         try {
-            Connection con =DBConection.getConnection();
+            Connection con =DBConnection.getConnection();
             String sql = "insert into users(name, password,email, contact) values (?, ? ,? ,?)";
-            preparedStatement pst = con.preparedStatement(sql);
+            PreparedStatement pst = con.preparedStatement(sql);
             
             pst.setString(1, name);
-            pst.setString(2, password);
+            pst.setString(2, pwd);
             pst.setString(3, email);
             pst.setString(4, contact);
             

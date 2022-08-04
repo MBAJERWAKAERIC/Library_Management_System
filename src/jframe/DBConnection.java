@@ -4,17 +4,20 @@
  */
 package jframe;
 
+import java.sql.Connection;
+
 /**
  *
  * @author ericmbajerwaka
  */
 public class DBConnection {
-    static connection con = null;
+    static Connection con = null;
     
-    public static connection getConnection(){
+    public static Connection getConnection(){
+        
         try {
-             class.forName("com.mysql.jdbc.Driver");
-          con = DriverManager.getconnection("jdbc://localhost:3306/library_ms" "root", "");
+             Class.forName("com.mysql.jdbc.Driver");
+          con = DriverManager.getConnection("jdbc:mysql://localhost:3306/library_ms" "root", "");
         } catch (Exception e){
             e.printStackTrace();
         }
